@@ -9,8 +9,8 @@ import json
 from solana.rpc.api import Client as SolanaClient
 from solana.rpc.websocket_api import connect
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
-from config.config import PUMP_FUN_PROGRAM_ID, SOLANA_RPC_URL, BLACKLISTED_TERMS, COOLDOWN_PERIOD
+sys.path.append('/home/ubuntu/fun_bot')
+from config.config import fun_PROGRAM_ID, SOLANA_RPC_URL, BLACKLISTED_TERMS, COOLDOWN_PERIOD
 
 # Configure logging
 logging.basicConfig(
@@ -33,11 +33,11 @@ class MarketAnalyzer:
         Monitor for new token creations on fun.
         Uses Solana websocket subscription to listen for program transactions.
         """
-        logger.info(f"Starting to monitor for new tokens on fun (Program ID: {PUMP_FUN_PROGRAM_ID})")
+        logger.info(f"Starting to monitor for new tokens on fun (Program ID: {fun_PROGRAM_ID})")
         
         async with connect(SOLANA_RPC_URL) as websocket:
             await websocket.logs_subscribe(
-                {"mentions": [PUMP_FUN_PROGRAM_ID]},
+                {"mentions": [fun_PROGRAM_ID]},
                 commitment="confirmed"
             )
             
@@ -88,7 +88,7 @@ class MarketAnalyzer:
             # This would need to be updated with the actual discriminator for token creation
             instructions = tx_details["result"]["transaction"]["message"]["instructions"]
             for instruction in instructions:
-                if instruction.get("programId") == PUMP_FUN_PROGRAM_ID:
+                if instruction.get("programId") == fun_PROGRAM_ID:
                     # Check for create instruction data pattern
                     # This is a simplified check and would need to be refined based on actual data format
                     data = instruction.get("data")

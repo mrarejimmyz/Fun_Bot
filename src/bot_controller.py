@@ -7,7 +7,7 @@ import logging
 import asyncio
 import time
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
+sys.path.append('/home/ubuntu/fun_bot')
 from src.blockchain_connection import BlockchainConnection
 from src.market_analyzer import MarketAnalyzer
 from src.trading_strategy import TradingStrategy
@@ -20,7 +20,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("pump_fun_bot.log"),
+        logging.FileHandler("fun_bot.log"),
         logging.StreamHandler()
     ]
 )

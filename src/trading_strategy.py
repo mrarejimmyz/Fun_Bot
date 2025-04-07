@@ -8,7 +8,7 @@ import time
 import asyncio
 from decimal import Decimal
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
+sys.path.append('/home/ubuntu/fun_bot')
 from config.config import (
     DEFAULT_SLIPPAGE, MAX_ALLOCATION_PER_TOKEN, 
     STOP_LOSS_PERCENTAGE, TAKE_PROFIT_PERCENTAGE

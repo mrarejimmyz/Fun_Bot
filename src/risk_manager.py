@@ -7,7 +7,7 @@ import logging
 import time
 import asyncio
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
+sys.path.append('/home/ubuntu/fun_bot')
 from config.config import (
     MAX_TOKENS_HELD, MINIMUM_LIQUIDITY, 
     STOP_LOSS_PERCENTAGE, TAKE_PROFIT_PERCENTAGE

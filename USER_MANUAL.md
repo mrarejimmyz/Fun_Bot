@@ -30,8 +30,8 @@ The fun Trading Bot is an automated trading system designed to monitor the fun p
    Clone the repository or extract the provided zip file to your desired location:
 
    ```bash
-   git clone https://github.com/yourusername/pump_fun_bot.git
-   cd pump_fun_bot
+   git clone https://github.com/yourusername/fun_bot.git
+   cd fun_bot
    ```
 
 2. **Run the Setup Script**
@@ -79,7 +79,7 @@ Additional configuration options are available in `config/config.py`:
 
 | Setting                  | Description                     | Default         |
 | ------------------------ | ------------------------------- | --------------- |
-| PUMP_FUN_PROGRAM_ID      | Program ID for fun on Solana    | pump...         |
+| fun_PROGRAM_ID           | Program ID for fun on Solana    | pump...         |
 | MAX_ALLOCATION_PER_TOKEN | Maximum wallet % per token      | 0.1 (10%)       |
 | STOP_LOSS_PERCENTAGE     | Stop loss trigger threshold     | 0.15 (15%)      |
 | TAKE_PROFIT_PERCENTAGE   | Take profit trigger threshold   | 0.3 (30%)       |
@@ -115,10 +115,10 @@ This will gracefully terminate the bot, allowing it to complete any pending oper
 
 ### Log Files
 
-The bot generates detailed logs in the `pump_fun_bot.log` file. You can monitor these logs in real-time:
+The bot generates detailed logs in the `fun_bot.log` file. You can monitor these logs in real-time:
 
 ```bash
-tail -f pump_fun_bot.log
+tail -f fun_bot.log
 ```
 
 ### Performance Tracking

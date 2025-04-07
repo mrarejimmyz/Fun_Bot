@@ -21,8 +21,8 @@ A high-performance trading bot for the fun platform on Solana blockchain, design
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pump_fun_bot.git
-cd pump_fun_bot
+git clone https://github.com/yourusername/fun_bot.git
+cd fun_bot
 ```
 
 2. Create and activate a virtual environment:
@@ -67,7 +67,7 @@ LOG_LEVEL=INFO
 
 Additional configuration options are available in `config/config.py`:
 
-- `PUMP_FUN_PROGRAM_ID`: The program ID for fun on Solana
+- `fun_PROGRAM_ID`: The program ID for fun on Solana
 - `MAX_ALLOCATION_PER_TOKEN`: Maximum percentage of wallet to allocate per token
 - `STOP_LOSS_PERCENTAGE`: Percentage drop that triggers stop loss
 - `TAKE_PROFIT_PERCENTAGE`: Percentage gain that triggers take profit
@@ -86,7 +86,7 @@ python src/bot_controller.py
 2. Monitor the logs:
 
 ```bash
-tail -f pump_fun_bot.log
+tail -f fun_bot.log
 ```
 
 3. To stop the bot, press Ctrl+C in the terminal where it's running.

@@ -187,7 +187,7 @@ The bot implements a comprehensive logging system:
 
 - **Log Levels**: ERROR, WARNING, INFO, DEBUG
 - **Log Format**: Timestamp, component name, log level, message
-- **Log Destinations**: Console and file (`pump_fun_bot.log`)
+- **Log Destinations**: Console and file (`fun_bot.log`)
 
 ## Error Handling
 

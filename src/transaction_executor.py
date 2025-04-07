@@ -9,8 +9,8 @@ import asyncio
 from solana.rpc.api import Client as SolanaClient
 import base58
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
-from config.config import PUMP_FUN_PROGRAM_ID, SOLANA_RPC_URL, PRIORITY_FEE, WALLET_PRIVATE_KEY
+sys.path.append('/home/ubuntu/fun_bot')
+from config.config import fun_PROGRAM_ID, SOLANA_RPC_URL, PRIORITY_FEE, WALLET_PRIVATE_KEY
 
 # Configure logging
 logging.basicConfig(

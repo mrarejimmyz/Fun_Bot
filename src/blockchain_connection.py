@@ -9,7 +9,7 @@ from solana.rpc.api import Client as SolanaClient
 from web3 import Web3
 from dotenv import load_dotenv
 import sys
-sys.path.append('/home/ubuntu/pump_fun_bot')
+sys.path.append('/home/ubuntu/fun_bot')
 from config.config import SOLANA_RPC_URL, BASE_RPC_URL
 
 # Configure logging
