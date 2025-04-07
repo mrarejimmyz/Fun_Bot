@@ -1,5 +1,5 @@
 """
-Trading strategy module for the pump.fun trading bot.
+Trading strategy module for the fun trading bot.
 Implements various strategies for token selection and trading execution.
 """
 
@@ -22,7 +22,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class TradingStrategy:
-    """Class to implement trading strategies for the pump.fun bot."""
+    """Class to implement trading strategies for the fun bot."""
     
     def __init__(self, wallet_balance=0):
         """Initialize trading strategy with wallet balance."""

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Setup script for pump.fun trading bot
+# Setup script for fun trading bot
 # This script creates a virtual environment and installs dependencies
 
 # Change to the bot directory
 cd "$(dirname "$0")"
 
-echo "Setting up pump.fun trading bot..."
+echo "Setting up fun trading bot..."
 
 # Create virtual environment if it doesn't exist
 if [ ! -d "venv" ]; then

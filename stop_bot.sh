@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Stop script for pump.fun trading bot
+# Stop script for fun trading bot
 # This script finds and stops the running bot process
 
 # Find the PID of the running bot
 BOT_PID=$(pgrep -f "python src/bot_controller.py")
 
 if [ -z "$BOT_PID" ]; then
-    echo "No running pump.fun trading bot found."
+    echo "No running fun trading bot found."
     exit 0
 fi
 
-echo "Stopping pump.fun trading bot (PID: $BOT_PID)..."
+echo "Stopping fun trading bot (PID: $BOT_PID)..."
 
 # Send SIGTERM to allow graceful shutdown
 kill -15 $BOT_PID

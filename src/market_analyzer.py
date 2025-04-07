@@ -1,5 +1,5 @@
 """
-Market analysis module for the pump.fun trading bot.
+Market analysis module for the fun trading bot.
 Monitors for new token creations and analyzes trading opportunities.
 """
 
@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class MarketAnalyzer:
-    """Class to monitor and analyze pump.fun market for trading opportunities."""
+    """Class to monitor and analyze fun market for trading opportunities."""
     
     def __init__(self, solana_client):
         """Initialize market analyzer with Solana client."""
@@ -30,10 +30,10 @@ class MarketAnalyzer:
         
     async def monitor_new_tokens(self):
         """
-        Monitor for new token creations on pump.fun.
+        Monitor for new token creations on fun.
         Uses Solana websocket subscription to listen for program transactions.
         """
-        logger.info(f"Starting to monitor for new tokens on pump.fun (Program ID: {PUMP_FUN_PROGRAM_ID})")
+        logger.info(f"Starting to monitor for new tokens on fun (Program ID: {PUMP_FUN_PROGRAM_ID})")
         
         async with connect(SOLANA_RPC_URL) as websocket:
             await websocket.logs_subscribe(
@@ -44,7 +44,7 @@ class MarketAnalyzer:
             first_resp = await websocket.recv()
             subscription_id = first_resp.result
             
-            logger.info(f"Successfully subscribed to pump.fun program logs (Subscription ID: {subscription_id})")
+            logger.info(f"Successfully subscribed to fun program logs (Subscription ID: {subscription_id})")
             
             while True:
                 try:
@@ -77,7 +77,7 @@ class MarketAnalyzer:
     
     def _is_token_creation(self, tx_details):
         """
-        Determine if a transaction is a token creation on pump.fun.
+        Determine if a transaction is a token creation on fun.
         Looks for specific instruction signatures in the transaction.
         """
         try:

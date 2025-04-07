@@ -1,10 +1,10 @@
-# Pump.fun Trading Bot
+# fun Trading Bot
 
-A high-performance trading bot for the pump.fun platform on Solana blockchain, designed to monitor for new token launches, analyze trading opportunities, and execute trades with robust risk management.
+A high-performance trading bot for the fun platform on Solana blockchain, designed to monitor for new token launches, analyze trading opportunities, and execute trades with robust risk management.
 
 ## Features
 
-- **Market Monitoring**: Automatically detects new token launches on pump.fun
+- **Market Monitoring**: Automatically detects new token launches on fun
 - **Trading Strategy**: Implements sophisticated algorithms for token selection and timing
 - **Risk Management**: Protects your capital with stop-loss, take-profit, and diversification rules
 - **Performance Tracking**: Records and analyzes trading history and performance metrics
@@ -19,23 +19,27 @@ A high-performance trading bot for the pump.fun platform on Solana blockchain, d
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/pump_fun_bot.git
 cd pump_fun_bot
 ```
 
 2. Create and activate a virtual environment:
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Configure your environment:
+
 ```bash
 cp .env.example .env
 ```
@@ -63,7 +67,7 @@ LOG_LEVEL=INFO
 
 Additional configuration options are available in `config/config.py`:
 
-- `PUMP_FUN_PROGRAM_ID`: The program ID for pump.fun on Solana
+- `PUMP_FUN_PROGRAM_ID`: The program ID for fun on Solana
 - `MAX_ALLOCATION_PER_TOKEN`: Maximum percentage of wallet to allocate per token
 - `STOP_LOSS_PERCENTAGE`: Percentage drop that triggers stop loss
 - `TAKE_PROFIT_PERCENTAGE`: Percentage gain that triggers take profit
@@ -74,11 +78,13 @@ Additional configuration options are available in `config/config.py`:
 ## Usage
 
 1. Start the bot:
+
 ```bash
 python src/bot_controller.py
 ```
 
 2. Monitor the logs:
+
 ```bash
 tail -f pump_fun_bot.log
 ```

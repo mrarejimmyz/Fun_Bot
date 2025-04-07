@@ -1,5 +1,5 @@
 """
-Blockchain connection module for the pump.fun trading bot.
+Blockchain connection module for the fun trading bot.
 Handles connections to Solana and Base blockchains.
 """
 

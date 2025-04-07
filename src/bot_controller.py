@@ -1,5 +1,5 @@
 """
-Main controller for the pump.fun trading bot.
+Main controller for the fun trading bot.
 Integrates all components and manages the overall bot operation.
 """
 
@@ -27,11 +27,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class PumpFunBot:
-    """Main controller class for the pump.fun trading bot."""
+    """Main controller class for the fun trading bot."""
     
     def __init__(self):
-        """Initialize the pump.fun trading bot."""
-        logger.info("Initializing pump.fun trading bot...")
+        """Initialize the fun trading bot."""
+        logger.info("Initializing fun trading bot...")
         
         # Initialize blockchain connection
         self.blockchain_connection = BlockchainConnection()
@@ -88,7 +88,7 @@ class PumpFunBot:
             return
             
         self.running = True
-        logger.info("Starting pump.fun trading bot...")
+        logger.info("Starting fun trading bot...")
         
         # Start monitoring and trading tasks
         monitoring_task = asyncio.create_task(self._monitoring_loop())
@@ -104,7 +104,7 @@ class PumpFunBot:
             return
             
         self.running = False
-        logger.info("Stopping pump.fun trading bot...")
+        logger.info("Stopping fun trading bot...")
         
         # Perform cleanup
         # Close any open connections, etc.

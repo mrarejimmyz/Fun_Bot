@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start script for pump.fun trading bot
+# Start script for fun trading bot
 # This script activates the virtual environment and starts the bot
 
 # Change to the bot directory
@@ -22,7 +22,7 @@ if [ ! -f ".env" ]; then
 fi
 
 # Start the bot
-echo "Starting pump.fun trading bot..."
+echo "Starting fun trading bot..."
 python src/bot_controller.py
 
 # Deactivate virtual environment on exit

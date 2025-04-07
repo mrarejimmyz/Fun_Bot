@@ -1,6 +1,6 @@
 """
-Transaction execution module for the pump.fun trading bot.
-Handles buying and selling tokens on pump.fun platform.
+Transaction execution module for the fun trading bot.
+Handles buying and selling tokens on fun platform.
 """
 
 import logging
@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class TransactionExecutor:
-    """Class to execute buy and sell transactions on pump.fun."""
+    """Class to execute buy and sell transactions on fun."""
     
     def __init__(self, solana_client=None):
         """Initialize transaction executor with Solana client."""
@@ -82,7 +82,7 @@ class TransactionExecutor:
     
     async def buy_token(self, token_data, sol_amount):
         """
-        Buy a token on pump.fun.
+        Buy a token on fun.
         Returns a tuple of (success, transaction_id, price).
         """
         try:
@@ -117,7 +117,7 @@ class TransactionExecutor:
     
     async def sell_token(self, token_address, bonding_curve_address, token_amount=None):
         """
-        Sell a token on pump.fun.
+        Sell a token on fun.
         If token_amount is None, sells entire balance.
         Returns a tuple of (success, transaction_id, price).
         """

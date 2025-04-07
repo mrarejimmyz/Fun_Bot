@@ -1,5 +1,5 @@
 """
-Risk management module for the pump.fun trading bot.
+Risk management module for the fun trading bot.
 Implements safeguards and monitoring to prevent losses.
 """
 

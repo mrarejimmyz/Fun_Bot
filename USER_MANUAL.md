@@ -1,8 +1,8 @@
-# Pump.fun Trading Bot - User Manual
+# fun Trading Bot - User Manual
 
 ## Introduction
 
-The Pump.fun Trading Bot is an automated trading system designed to monitor the pump.fun platform for new token launches, analyze trading opportunities, and execute trades with robust risk management. This user manual provides detailed instructions on how to set up, configure, and operate the bot.
+The fun Trading Bot is an automated trading system designed to monitor the fun platform for new token launches, analyze trading opportunities, and execute trades with robust risk management. This user manual provides detailed instructions on how to set up, configure, and operate the bot.
 
 ## Table of Contents
 
@@ -44,6 +44,7 @@ The Pump.fun Trading Bot is an automated trading system designed to monitor the 
    ```
 
    This script will:
+
    - Create a Python virtual environment
    - Install all required dependencies
    - Create a template .env file
@@ -65,26 +66,26 @@ The Pump.fun Trading Bot is an automated trading system designed to monitor the 
 
 The bot uses environment variables stored in the `.env` file for sensitive configuration:
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| SOLANA_RPC_URL | URL for Solana RPC node | https://api.mainnet-beta.solana.com |
-| BASE_RPC_URL | URL for Base blockchain RPC node | https://mainnet.base.org |
-| WALLET_PRIVATE_KEY | Your Solana wallet private key | 5Kd...your_private_key |
-| LOG_LEVEL | Logging verbosity | INFO |
+| Variable           | Description                      | Example                             |
+| ------------------ | -------------------------------- | ----------------------------------- |
+| SOLANA_RPC_URL     | URL for Solana RPC node          | https://api.mainnet-beta.solana.com |
+| BASE_RPC_URL       | URL for Base blockchain RPC node | https://mainnet.base.org            |
+| WALLET_PRIVATE_KEY | Your Solana wallet private key   | 5Kd...your_private_key              |
+| LOG_LEVEL          | Logging verbosity                | INFO                                |
 
 ### Bot Configuration
 
 Additional configuration options are available in `config/config.py`:
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| PUMP_FUN_PROGRAM_ID | Program ID for pump.fun on Solana | pump... |
-| MAX_ALLOCATION_PER_TOKEN | Maximum wallet % per token | 0.1 (10%) |
-| STOP_LOSS_PERCENTAGE | Stop loss trigger threshold | 0.15 (15%) |
-| TAKE_PROFIT_PERCENTAGE | Take profit trigger threshold | 0.3 (30%) |
-| COOLDOWN_PERIOD | Wait time after token detection | 15 seconds |
-| BLACKLISTED_TERMS | Terms to avoid in token names | ["scam", "rug"] |
-| PRIORITY_FEE | Transaction priority fee | 10000 |
+| Setting                  | Description                     | Default         |
+| ------------------------ | ------------------------------- | --------------- |
+| PUMP_FUN_PROGRAM_ID      | Program ID for fun on Solana    | pump...         |
+| MAX_ALLOCATION_PER_TOKEN | Maximum wallet % per token      | 0.1 (10%)       |
+| STOP_LOSS_PERCENTAGE     | Stop loss trigger threshold     | 0.15 (15%)      |
+| TAKE_PROFIT_PERCENTAGE   | Take profit trigger threshold   | 0.3 (30%)       |
+| COOLDOWN_PERIOD          | Wait time after token detection | 15 seconds      |
+| BLACKLISTED_TERMS        | Terms to avoid in token names   | ["scam", "rug"] |
+| PRIORITY_FEE             | Transaction priority fee        | 10000           |
 
 You can modify these settings to adjust the bot's trading strategy and risk management.
 
@@ -98,7 +99,7 @@ To start the bot, use the provided start script:
 ./start_bot.sh
 ```
 
-The bot will begin monitoring the pump.fun platform for new token launches and execute trades according to your configuration.
+The bot will begin monitoring the fun platform for new token launches and execute trades according to your configuration.
 
 ### Stopping the Bot
 
@@ -168,11 +169,13 @@ The bot implements several risk management features:
 ### Common Issues
 
 1. **Connection Errors**
+
    - Verify your RPC URLs are correct and accessible
    - Check your internet connection
    - Ensure the RPC provider hasn't changed their endpoint
 
 2. **Transaction Failures**
+
    - Verify your wallet has sufficient SOL for transactions
    - Check that your private key is correctly formatted
    - Increase the PRIORITY_FEE if network is congested
@@ -184,32 +187,35 @@ The bot implements several risk management features:
 
 ### Error Messages
 
-| Error | Possible Cause | Solution |
-|-------|----------------|----------|
+| Error                            | Possible Cause                         | Solution                             |
+| -------------------------------- | -------------------------------------- | ------------------------------------ |
 | "No wallet private key provided" | Missing or invalid private key in .env | Add correct private key to .env file |
-| "Failed to connect to Solana" | RPC URL issue or network problem | Check RPC URL and network status |
-| "Insufficient balance" | Not enough SOL in wallet | Add SOL to your wallet |
+| "Failed to connect to Solana"    | RPC URL issue or network problem       | Check RPC URL and network status     |
+| "Insufficient balance"           | Not enough SOL in wallet               | Add SOL to your wallet               |
 
 ## Security Best Practices
 
 1. **Private Key Protection**
+
    - Never share your .env file or private key
    - Use a dedicated wallet for the bot with limited funds
    - Consider running the bot on a secure, dedicated server
 
 2. **Regular Monitoring**
+
    - Check the bot's performance regularly
    - Monitor your wallet balance
    - Review trade history for unexpected behavior
 
 3. **Risk Management**
+
    - Start with small amounts until you're comfortable with the bot
    - Regularly withdraw profits to a separate wallet
    - Never invest more than you can afford to lose
 
 4. **Updates and Maintenance**
    - Check for updates to the bot software
-   - Monitor for changes to the pump.fun platform
+   - Monitor for changes to the fun platform
    - Update your RPC endpoints if performance degrades
 
 ---
